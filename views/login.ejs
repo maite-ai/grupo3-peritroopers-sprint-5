@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./../partials/head') %>
+<%- include('partials/head') %>
 
     <body class="body-login">
-        <%- include('./../partials/header') %>
+        <%- include('partials/header') %>
         <main class="main-login">
             <article class="login-container">
-                <form action="/login" method="POST" class="login-page">
+                <form action="/users/profile" method="POST" class="login-page">
                     <div class="login-fields">
                         <div class="image-container">
                             <img src="/images/Login-gif.gif" width="40%" alt="user-gif" class="profile-picture">
@@ -18,6 +18,11 @@
                                 <i class="far fa-envelope"></i>
                             </div>
                             <input type="mail" name="user-mail" placeholder="Correo Electrónico" class="sign-in-control" required>
+                            <% if(locals.errors && errors.email){ %>
+                                <div>
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
                         </div>
                     </div>
                     
@@ -50,6 +55,6 @@
                 </form>
             </article>        
         </main>
-        <%- include('./../partials/footer') %>
+        <%- include('partials/footer') %>
     </body>
 </html>

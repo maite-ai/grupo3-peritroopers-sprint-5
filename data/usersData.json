@@ -7,7 +7,8 @@
         "address":"calle Verdadera 321",
         "email":"admin@dhtroopers.com",
         "password":"admin321",
-        "userCategory":"admin"
+        "userCategory":"admin",
+        "avatar":null
     },
     {
         "id":"2",
@@ -17,6 +18,7 @@
         "address":"calle Falsa 123",
         "email":"mail@client.com",
         "password":"user123",
-        "userCategory":"user"
+        "userCategory":"user",
+        "avatar":null
     }
 ]
