@@ -4,14 +4,14 @@ const validations=[
     body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
     body('lastName').notEmpty().withMessage('Tienes que escribir un nombre'),
     body('birthDate').notEmpty().withMessage('Tienes que poner tu fecha de nacimiento'),
-    body('adress').notEmpty().withMessage('Tienes que poner tu dirección'),
+    body('address').notEmpty().withMessage('Tienes que poner tu dirección'),
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
         .isEmail().withMessage('Tienes que escribir un formato de correro válido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
     body('avatar').custom((value,{req})=>{
         let file=req.file
-        let acceptedExtentions=['.jgp','.png','.gif']
+        let acceptedExtentions=['.jpg','.png','.gif']
         if(!file){
             throw new Error('Tienes que subir una imágen')
         }else{
