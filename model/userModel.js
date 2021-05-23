@@ -1,6 +1,6 @@
 const fs=require('fs')
 const Users={
-    fileName:'./data/usersData.json',
+    fileName:'./data/users.json',
     getData:function(){
         return JSON.parse(fs.readFileSync(this.fileName,'utf-8'))
     },
@@ -25,11 +25,11 @@ const Users={
         let userFound=allUsers.find(oneUser=>oneUser[field]===text)
         return userFound
     },
-    create: function(UsersData){
+    create: function(users){
         let allUsers=this.findAll()
         let newUser={
             id:this.generateId(),
-            ...UsersData
+            ...users
         }
         allUsers.push(newUser)
         fs.writeFileSync(this.fileName,JSON.stringify(allUsers,null,' '))
