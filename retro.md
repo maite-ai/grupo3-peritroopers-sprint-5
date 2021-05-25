@@ -16,13 +16,13 @@ Pair-programming a fin de trabajar en simultáneo, aportando distintas opiniones
 
 ## - Continuar haciendo -
 
-En línea con el punto anterior, queremos continuar haciendo todo lo que hemos mencionado, aprendiendo de nuestros errores, conversando, exponiendo ideas. Alcanzamos un nivel de confianza entre nosotros, muy importante para el el equipo que aprovechamos para avanzar en la planificación y realización de tareas.
+En línea con el punto anterior, queremos continuar haciendo todo lo que hemos mencionado, aprendiendo de nuestros errores, conversando, exponiendo ideas. Alcanzamos un nivel de confianza entre nosotros, muy importante para el equipo que aprovechamos para avanzar en la planificación y realización de tareas.
   
 Tal como mencionamos en el retro anterior, en cuanto a **“Dejar de hacer“ y “Menos de”**, concluimos que como equipo logramos dejar de reproducir todo aquello que nos propusimos evitar, y no repetir. Seguimos avanzando tomando conciencia de ello, y dialogando mucho entre nosotros seguimos creciendo y consolidándonos a la par de nuestro proyecto.
   
   ***   
 
       
-¿Querés ver como trabajamos? Visitá [nuestro tablero de Sprint 4](https://trello.com/b/GVzLZYzx/sprint-4) en Trello.
+¿Querés ver como trabajamos? Visitá [nuestro tablero de Sprint 5](https://trello.com/b/r4Qh0aX8/sprint-5) en Trello.
 
 ![Logo de DH-Troopers](logo-grupo.gif)
