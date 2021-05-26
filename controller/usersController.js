@@ -2,8 +2,8 @@ const { validationResult } = require('express-validator')
 const bcryptjs=require('bcryptjs')
 const User=require('../model/userModel')
 let userController = {
-    register: (req, res) => { 
-        res.render("register");
+    register: (req, res) => {
+        res.render('register');
     },
     processRegister: (req,res) => {
         const resultValidation = validationResult(req)
@@ -33,7 +33,7 @@ let userController = {
         return res.redirect('/users/login')
     },
     login: (req, res) => {
-        res.render("login")
+        res.render('login')
     },
     loginProcess:(req,res)=>{
         let userToLog=User.findByField('email',req.body.email)
@@ -42,25 +42,25 @@ let userController = {
             if(passValidation){
                 delete userToLog.password
                 req.session.userLogged=userToLog
-                if(req.body.remember_user){
-                    res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*2})
+                if(req.body.remember_me){
+                    res.cookie('userEmail',req.body.email,{maxAge: (1000*60)*2})
                 }
                 return res.redirect('/users/profile')
             }
-            return res.render("login",{
+            return res.render('login',{
                 errors:{
                     msg: 'Credenciales inválidas'
                 }
             })
         }
-        return res.render("login",{
+        return res.render('login',{
             errors:{
                 msg: 'No estás registrado'
             }
         })
     },
     profile:(req,res)=>{
-        console.log(req.cookies.userEmail);
+        //console.log(req.cookies.userEmail);
         return res.render('profile',{
             user:req.session.userLogged
         })

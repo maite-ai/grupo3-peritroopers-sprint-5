@@ -11,35 +11,105 @@
                         <div class="regform-outofthebox">
                             <div class="contenedor-regform name">
                                 <label class="labelName" id="labelName">Nombre</label>
-                                <input type="text" class="inputName" name="name" placeholder="Cosme" required>
+                                <input 
+                                    type="text"
+                                    class="inputName <%= locals.errors && errors.name?'is-invalid':null %>"
+                                    name="name"
+                                    placeholder="Cosme"
+                                    value="<%= locals.oldData?oldData.name:null %>"
+                                >
+                                <% if(locals.errors && errors.name) { %>
+                                    <div>
+                                        <%= errors.name.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contenedor-regform lastName">
                                 <label class="labelLastName" id="labelLastName">Apellido</label>
-                                <input type="text" class="inputLastName" name="lastName" placeholder="Fulanito" required>
+                                <input
+                                    type="text"
+                                    class="inputLastName <%= locals.errors && errors.lastName?'is-invalid':null %>"
+                                    name="lastName"
+                                    placeholder="Fulanito"
+                                    value="<%= locals.oldData?oldData.lastName:null %>"
+                                >
+                                <% if(locals.errors && errors.lastName) { %>
+                                    <div>
+                                        <%= errors.lastName.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contenedor-regform age">
                                 <label class="labelAge" id="labelAge">Fecha de Nacimiento</label>
-                                <input type="date" class="inputAge" name="birthDate" placeholder="Fecha de Nacimiento" required>
+                                <input
+                                    type="date"
+                                    class="inputAge <%= locals.errors && errors.birthDate?'is-invalid':null %>"
+                                    name="birthDate"
+                                    placeholder="Fecha de Nacimiento"
+                                    value="<%= locals.oldData?oldData.birthDate:null %>"
+                                >
+                                <% if(locals.errors && errors.birthDate) { %>
+                                    <div>
+                                        <%= errors.birthDate.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contenedor-regform address">
                                 <label class="labelAddress" id="labelAddress">Dirección</label>
-                                <input type="text" class="inputAddress" name="address" placeholder="Dirección" required>
+                                <input
+                                    type="text"
+                                    class="inputAddress <%= locals.errors && errors.address?'is-invalid':null %>"
+                                    name="address"
+                                    placeholder="Dirección"
+                                    value="<%= locals.oldData?oldData.address:null %>"
+                                >
+                                <% if(locals.errors && errors.address) { %>
+                                    <div>
+                                        <%= errors.address.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contenedor-regform enail">
                                 <label class="labelEmail" id="labelEmail">Email</label>
-                                <input type="email" class="inputEmail" name="email" placeholder="example@gmail.com" required>
+                                <input
+                                    type="email"
+                                    class="inputEmail <%= locals.errors && errors.email?'is-invalid':null %>"
+                                    name="email"
+                                    placeholder="example@gmail.com"
+                                    value="<%= locals.oldData?oldData.email:null %>"
+                                >
+                                <% if(locals.errors && errors.email){ %>
+                                    <div>
+                                        <%= errors.email.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contenedor-regform password">
                                 <label class="labelPassword" id="labelPassword">Contraseña</label>
-                                <input type="password" class="inputPassword" name="password" placeholder="**********" required>
+                                <input type="password" class="inputPassword" name="password" placeholder="**********">
+                                <% if(locals.errors && errors.password){ %>
+                                    <div class="text-danger">
+                                        <%= errors.password.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contenedor-regform">
                                 <label class="labelRePassword" id="labelRePassword">Repita su contraseña</label>
-                                <input type="password" class="inputRePassword" placeholder="**********" required>
+                                <input type="password" class="inputRePassword" placeholder="**********" name="confirmPassword">
+                                <% if(locals.errors && errors.confirmPassword){ %>
+                                    <div class="text-danger">
+                                        <%= errors.confirmPassword.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contenedor-regform">
                                 <label class="labelAvatar">Imágen de Perfil</label>
                                 <input type="file" class="inputAvatar" name="avatar">
+                                <% if(locals.errors && errors.avatar){ %>
+                                    <div>
+                                        <%= errors.avatar.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                         </div>
                         

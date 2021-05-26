@@ -8,7 +8,7 @@ const Users={
         let allUsers=this.findAll()
         let lastUser=allUsers.pop()
         if(lastUser){
-            return lastUser.id+1
+            return lastUser.id + 1
         }
         return 1
     },
@@ -25,11 +25,11 @@ const Users={
         let userFound=allUsers.find(oneUser=>oneUser[field]===text)
         return userFound
     },
-    create: function(UsersData){
+    create: function(users){
         let allUsers=this.findAll()
         let newUser={
             id:this.generateId(),
-            ...UsersData
+            ...users
         }
         allUsers.push(newUser)
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers,null,' '))

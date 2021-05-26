@@ -8,7 +8,15 @@ const validations=[
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
         .isEmail().withMessage('Tienes que escribir un formato de correro válido'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('password')
+        .notEmpty().withMessage('Tienes que escribir una contraseña').bail()
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener un mínimo de 8 caracteres').bail()
+        .custom(async(confirmPassword,{req})=>{
+            const password = req.body.password;
+            if(password !== req.body.confirmPassword){
+                throw new Error('Las contraseñas no coinciden')
+            }
+        }),
     body('avatar').custom((value,{req})=>{
         let file=req.file
         let acceptedExtentions=['.jpg','.png','.gif']
