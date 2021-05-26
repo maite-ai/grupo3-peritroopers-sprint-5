@@ -6,7 +6,7 @@
         <%- include('partials/header') %>
         <main class="main-login">
             <article class="login-container">
-                <form action="/users/profile" method="POST" class="login-page">
+                <form action="/users/login" method="POST" class="login-page">
                     <div class="login-fields">
                         <div class="image-container">
                             <img src="/images/Login-gif.gif" width="40%" alt="user-gif" class="profile-picture">
@@ -17,7 +17,7 @@
                             <div class="mail-icon">
                                 <i class="far fa-envelope"></i>
                             </div>
-                            <input type="mail" name="user-mail" placeholder="Correo Electrónico" class="sign-in-control" required>
+                            <input type="email" name="email" placeholder="Correo Electrónico" class="sign-in-control">
                             <% if(locals.errors && errors.email){ %>
                                 <div>
                                     <%= errors.email.msg %>
@@ -31,7 +31,12 @@
                             <div class="password-icon">
                                 <i class="fas fa-lock"></i>
                             </div>
-                            <input type="password" name="password" minlength="6" maxlength="15" placeholder="Contraseña" class="sign-in-control" required>
+                            <input type="password" name="password" placeholder="Contraseña" class="sign-in-control">
+                            <% if(locals.errors && errors.password){ %>
+                                <div>
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>
                         </div>
                     </div>
                     
@@ -43,17 +48,17 @@
                                 
                     <div class="login-fields">
                         <div class="remember-me-container">
-                            <input type="checkbox" name="remember-me" value="remember-me" class="remember-me">
+                            <input type="checkbox" name="remember_me" value="remember-me" class="remember-me">
                             <span class="rememberme-text">Recordarme</span>
                         </div>
                     </div>
 
                     <div class="button-form">
-                        <button type="submit" class="login-button"><a href="/" class="login-link">Iniciar Sesión</button></a>
+                        <button type="submit" class="login-button">Iniciar Sesión</button>
                         <button type="submit" class="register-button"><a href="/register" class="register-link">¿No tenes usuario? Registrate</button></a>
-                    </div>                 
+                    </div>
                 </form>
-            </article>        
+            </article>
         </main>
         <%- include('partials/footer') %>
     </body>

@@ -1,24 +1,35 @@
 [
-    {
-        "id":"1",
-        "name":"Cosme",
-        "lastName":"Fulanito",
-        "birthDate":"08/07/2000",
-        "address":"calle Verdadera 321",
-        "email":"admin@dhtroopers.com",
-        "password":"admin321",
-        "userCategory":"admin",
-        "avatar":null
-    },
-    {
-        "id":"2",
-        "name":"Fulanito",
-        "lastName":"Cosme",
-        "birthDate":"19/06/1992",
-        "address":"calle Falsa 123",
-        "email":"mail@client.com",
-        "password":"user123",
-        "userCategory":"user",
-        "avatar":null
-    }
+ {
+  "id": 1,
+  "name": "Cosme",
+  "lastName": "Fulanito",
+  "birthDate": "08/07/2000",
+  "address": "calle Verdadera 321",
+  "email": "admin@dhtroopers.com",
+  "password": "admin321",
+  "userCategory": "admin",
+  "avatar": null
+ },
+ {
+  "id": 2,
+  "name": "Fulanito",
+  "lastName": "Cosme",
+  "birthDate": "19/06/1992",
+  "address": "calle Falsa 123",
+  "email": "mail@client.com",
+  "password": "user123",
+  "userCategory": "user",
+  "avatar": null
+ },
+ {
+  "id": 3,
+  "name": "Matías",
+  "lastName": "Benavide",
+  "birthDate": "2000-07-08",
+  "address": "Casa Genérica 123",
+  "email": "matiasbenavide@gmail.com",
+  "password": "$2a$10$P5GMkT08./bMq3Mt8f.AbOrzA2tEW7nn5vJ0eMlMLM56gVwlVq8Hq",
+  "confirmPassword": "123456789",
+  "avatar": "1621988800234_img.jpg"
+ }
 ]

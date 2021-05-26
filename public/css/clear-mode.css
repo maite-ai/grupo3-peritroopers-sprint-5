@@ -651,6 +651,7 @@ form i {
 
     .button-form .login-button{
         background-color: #180a41;
+        color: #fff;
         border: none;
         padding: 12px 20px;
         border-radius: 4px;
